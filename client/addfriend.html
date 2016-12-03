@@ -1,0 +1,17 @@
+<template name="addfriend">
+	<!-- title-->
+	<h3 class="jumbotron text-center">Add Friend</h3>	
+	<!-- inserting of the code-->
+
+	{{#if currentUser}}
+
+	<input placeholder="Friend Code" class="form-control text-center" id="friendId"> 
+	<!-- submit button-->
+	<button class="btn-block btn-warning" id="add">
+	<!-- button text-->
+	<h3>Add</h3>	
+	</button>
+	{{else}}
+	<h2>You must log in or register</h2>
+	{{/if}}
+</template>

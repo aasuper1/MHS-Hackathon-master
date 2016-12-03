@@ -1,0 +1,8 @@
+<template name="homepage">
+	{{#if login}}
+	{{move}}
+	{{else}}
+	<center><h1>Login</h1></center>
+	<div id="login-screen">{{>loginButtons}}</div>
+	{{/if}}
+</template>

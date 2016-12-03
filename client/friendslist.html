@@ -1,0 +1,49 @@
+<template name="friendslist">
+
+{{#if currentUser}}
+<a href="{{pathFor 'addfriend'}}">
+	<button class="btn-block btn-warning btn-raised">
+	 <h4> Add Friend</h4>	
+	</button> </a>
+{{#if friend}}
+	<!-- button and link to the add friends page-->
+	
+	<!-- creating the table-->
+<table class="table table-striped">
+	<tbody>
+	<!-- table headings-->
+<tr>
+	<th>
+	<h3><b>Username</b></h3>
+	</th>
+</tr>
+
+<!-- creates a template of friends row for each of your friends-->
+{{#each friends}}
+{{>friendsrow}}
+{{/each}}
+</tbody>
+</table>
+
+
+{{else}}
+<center><h1>You Have no Friends Yet</h1></center>
+{{/if}}
+{{else}}
+<h2>You must log in or register</h2>
+{{/if}}
+
+
+
+
+
+
+</template>
+<template name="friendsrow">
+<!-- creates new row of two elements of the full name and then the username-->
+<tr>
+<!-- pulls a fullname and username value from profile-->
+<td><h3>{{username}}</h3></td>
+
+
+</tr></template>
