@@ -5,6 +5,17 @@ Template.game.events({
 		if (Session.get("running")) {
 		Session.set("running",false)
 		clearInterval(sizeincreaser);
+		$(".bottle").css({bottom:"0px"})
+
+		  $('#wholebottle').animate({  transform: 10}, {
+    		step: function(now,fx) {
+        	$(this).css({
+            '-webkit-transform':'rotate('+now+'deg)', 
+            '-moz-transform':'rotate('+now+'deg)',
+            'transform':'rotate('+now+'deg)'
+        });
+    }
+    });
 
 		}
 		else {
