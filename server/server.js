@@ -10,7 +10,7 @@ Meteor.methods ({
 			//rejoins ir into a string
 			userId= userId.join("")
 			//splits it at ` to gain the first 5 terms
-			Profile.insert({userId:user, username:email.split("@")[0],friendcode:userId.split("`")[0]})
+			Profile.insert({userId:user, username:email.split("@")[0],friendcode:userId.split("`")[0],highscore:0})
 		}
 	}
 
