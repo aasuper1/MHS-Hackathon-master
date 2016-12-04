@@ -46,5 +46,8 @@ Template.profiles.helpers({
 		userId= userId.join("")
 		//splits it at ` to gain the first 5 terms
 		return userId.split("`")[0];
+	},
+	highscore:function(){
+		return Profile.find({userId:Meteor.userId()}).fetch()[0].highscore
 	}
 })

@@ -27,12 +27,12 @@ Template.game.events({
 
 		
 		if (random<percentage) {
-			alert("hit")
+			alert("Congratulations you have successfully flipped the bottle!!!")
 			Session.set("score",Session.get("score")+1)
 			$(".bottle").height(0);
 		}
 		else {
-			alert("miss")
+			alert("Ha your bottle fell over!!!! :P ")
 			if (Profile.find({userId:Meteor.userId()}).fetch()[0].highscore<Session.get("score")){
 				var toinsert = Profile.find({userId:Meteor.userId()}).fetch()[0]
 			//changes the username to whatever you changed it to

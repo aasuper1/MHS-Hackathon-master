@@ -1,0 +1,17 @@
+<template name="leaderboard">
+	<table class="table table-striped">
+	<h1 class="text-center">LeaderBoard</h1>
+	<tbody>
+	<tr>
+		<td><h4>Username</h4></td>
+		<td><h4>High Score</h4></td>
+	</tr>
+	{{#each score}}
+	<tr>
+		<td><h4>{{username}}</h4></td>
+		<td><h4>{{highscore}}</h4></td>
+	</tr>
+	{{/each}}
+	</tbody>
+	</table>
+</template>
